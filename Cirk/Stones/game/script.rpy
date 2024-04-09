@@ -14,7 +14,7 @@ label start:
 
     $ renpy.movie_cutscene("images/zoom_to_zdanie.webm", delay=2, loops=0, stop_music=True)
 
-    scene bg room
+    scene bg_scene
     show alice_happy at right_pos 
     with dissolve
     a "Я веселая!"
