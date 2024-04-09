@@ -3,7 +3,13 @@
 # Определение персонажей игры.
 define a = Character('Алиса', color="#000000")
 define right_pos = Position(xalign=0.8,yalign=0.3)
+image bg_scene:
+    "images/bg_scene.jpg"
+    zoom 0.5
 
+image bg_doctor:
+    "images/bg_doctor.avif"
+    zoom 1.25
 # Вместо использования оператора image можете просто
 # складывать все ваши файлы изображений в папку images.
 # Например, сцену bg room можно вызвать файлом "bg room.png",
@@ -22,5 +28,8 @@ label start:
     a "Я нейтральная!"
     show alice_sad at right_pos
     a "Я грустная!"
-
+    scene bg_doctor
+    show alice_happy at right_pos 
+    with dissolve
+    a "aboba!"
     return
